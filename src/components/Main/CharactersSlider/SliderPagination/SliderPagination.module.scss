@@ -1,0 +1,69 @@
+.SliderPagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    padding-left: 1000px;
+
+    animation: appearButton 1300ms ease-in;
+
+    .button {
+        width: 115px;
+        padding: 10px 0;
+
+        background-color: transparent;
+        border: none;
+
+        font-family: "Roboto", system-ui;
+        font-weight: 500;
+        font-size: 18px;
+
+        cursor: pointer;
+    }
+
+    .disabled {
+        opacity: 0.2;
+
+        cursor: default;
+    }
+}
+
+
+
+.enter {
+    opacity: 1;
+}
+
+.enterActive {
+    gap: 50px;
+    
+    opacity: 0;
+    transition: all ease-in 300ms;
+}
+
+.enterDone {
+    opacity: 0;
+    animation: none;
+}
+
+.exitActive {
+    animation: appearButton 1300ms ease-in;
+}
+
+
+
+@keyframes appearButton {
+    0% {
+        gap: 50px;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        gap: 10px;
+        opacity: 1;
+    }
+}

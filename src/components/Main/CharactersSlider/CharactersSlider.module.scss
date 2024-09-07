@@ -1,0 +1,44 @@
+.charactersSlider {
+    width: 1300px;
+    height: 300px;
+
+    padding-left: 100px;
+    margin-bottom: 20px;
+
+    // border: 1px solid orange;
+
+    .charactersWrapper {
+            display: flex;
+            gap: 50px;
+
+            height: 300px;
+
+            transition: all ease-in 1000ms;
+
+            animation: appear 1500ms;
+
+            &.page2 {
+                margin-left: -1050px;
+                transition: all ease-in 1000ms;
+            }
+
+            &.page3 {
+                margin-left: -2100px;
+                transition: all ease-in 1000ms;
+            } 
+    }
+}
+
+@keyframes appear {
+    from {
+        gap: 500px;
+        margin-left: 1350px;
+        opacity: 0;
+    }
+
+    to {
+        gap: 50px;
+        margin-left: 0;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,155 @@
+.transition2-enter-active {
+    & div:first-child {
+        top: -200px !important; // !important нужен чтобы отменить hover эффект 
+        left: -350px;
+        z-index: 2;
+
+        width: 1500px;
+        height: 1500px;
+
+        border-radius: 250px 20px 20px 20px;
+
+        transition: all ease-in 800ms;
+
+        h3 {
+            padding-left: 450px;
+            margin-top: -100px;
+
+            font-size: 60px;
+
+            transition: all ease-in 800ms;
+        }
+
+        h4 {
+            padding-left: 460px;
+            font-size: 30px;
+
+            transition: all ease-in 800ms;
+        }
+
+        p {
+            
+            margin-top: -20px;
+
+            opacity: 1;
+            visibility: visible;
+
+            transition: all ease-in 1000ms 800ms;
+        }
+
+        span {
+            opacity: 0 !important;
+            transition: opacity ease-in 100ms !important;
+        }
+
+        img {
+            right: 400px;
+
+            width: 200px !important;
+            height: 200px !important;
+
+            opacity: 1;
+            visibility: visible;
+
+            transition: all ease-in 1000ms 800ms;
+        }
+
+        button {
+            right: 350px !important;
+
+            opacity: 1 !important;
+
+            transition: all ease-in 500ms 1000ms !important;
+        }
+    }
+
+    & > img {
+        top: -250px !important;
+        left: -400px !important;
+        z-index: 3;
+
+        width: 560px !important;
+        height: 560px !important;
+
+        transition: all ease-in 800ms !important;
+    }
+}
+
+.transition2-enter-done {
+    & div:first-child {
+        top: -200px !important;
+        left: -350px;
+        z-index: 2;
+
+        width: 1500px;
+        height: 1500px;
+        padding-top: 150px;
+
+        border-radius: 250px 20px 20px 20px;
+
+        h3 {
+            padding-left: 450px;
+            margin-top: -100px;
+
+            font-size: 60px;
+
+        }
+
+        h4 {
+            padding-left: 460px;
+            font-size: 30px;
+        }
+
+        p {
+            width: 880px;
+            height: 200px;
+            padding-left: 460px;
+
+            opacity: 1;
+            visibility: visible;
+        }
+
+        span {
+            opacity: 0 !important;
+        }
+
+        img {
+            right: 400px;
+
+            width: 200px !important;
+            height: 200px !important;
+
+            opacity: 1;
+            visibility: visible;
+        }
+
+        button {
+            right: 350px !important;
+
+            opacity: 1 !important;
+        }
+    }
+
+    & > img {
+        top: -250px !important;
+        left: -400px !important;
+        z-index: 3;
+
+        width: 560px !important;
+        height: 560px !important;
+    }
+}
+
+.transition2-exit-active {
+    & div:first-child {
+        z-index: 2;
+
+        span {
+            opacity: 0 !important;
+        }
+    }
+
+    & > img {
+        z-index: 3;
+    }
+}

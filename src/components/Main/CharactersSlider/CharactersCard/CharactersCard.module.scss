@@ -1,0 +1,191 @@
+.card {
+    position: relative;
+
+    flex-shrink: 0; // что-бы элементы не сжимались 
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 16px;
+    box-shadow: 5px 10px 15px 3px rgba(0, 0, 0, 0.2);
+
+    cursor: pointer;
+
+    transition: all ease-in 800ms;
+
+    &.hide {
+        opacity: 0;
+        transform: translateY(600px);
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 100%;
+        padding: 180px 0 0 30px;
+
+        background-color: #afafbb;
+        border-radius: 16px;
+
+        transition: all ease-in 800ms;
+
+        h3 {
+            font-size: 40px;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.459);
+
+            transition: all ease-in 800ms;
+        }
+
+        h4 {
+            margin-bottom: 15px;
+
+            font-family: "Roboto", system-ui;
+            font-weight: 900;
+            font-size: 20px;
+
+            transition: all ease-in 800ms;
+        }
+
+        p {
+            width: 880px;
+            height: 200px;
+            padding-left: 460px;
+
+            font-size: 20px;
+            line-height: 160%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition: all ease-in 300ms;
+        }
+
+        img {
+            position: absolute;
+            top: 100px;
+            right: 0;
+
+            width: 200px;
+            height: 200px;
+
+            opacity: 0;
+            visibility: hidden;
+            
+            transition: all ease-in 300ms;
+        }
+
+        .button {
+            position: absolute;
+            top: -50px;
+            right: 0;
+
+            width: 115px;
+            padding: 10px 0;
+
+            background-color: transparent;
+            border: none;
+
+            font-family: "Roboto", system-ui;
+            font-weight: 500;
+            font-size: 18px;
+
+            opacity: 0;
+
+            cursor: pointer;
+
+            transition: all ease-in 300ms;
+        }
+
+        .more {
+            font-family: "Roboto", system-ui;
+            font-weight: 400;
+
+            opacity: 0;
+            transition: opacity ease-in 300ms 300ms;
+
+            color: aliceblue;
+        }
+    }
+
+
+    &:hover .bg.hover .more{
+        opacity: 1;
+    }
+
+    &:hover .bg.hover{
+        padding-top: 150px;
+    }
+
+    .img {
+        position: absolute;
+        top: -80px;
+        left: 0px;
+
+        width: 260px;
+        height: 260px;
+
+        border-radius: 16px;
+        background-color: transparent;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        transition: all ease-in 800ms;
+    }
+
+    &:hover .img.big{
+        top: -120px;
+    }
+
+    .small {
+        top: -10px;
+
+        width: 200px;
+        height: 200px;
+
+        animation: makeItSmall 800ms ease-in;
+    }
+
+    .big {
+        width: 260px;
+        height: 260px;
+
+        animation: makeItBig 800ms ease-in;
+    }
+}
+
+@keyframes makeItSmall {
+    from {
+        top: -80px;
+
+        width: 260px;
+        height: 260px;
+    }
+
+    to {
+        top: -10px;
+
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@keyframes makeItBig {
+    from {
+        top: -10px;
+
+        width: 200px;
+        height: 200px;
+    }
+
+    to {
+        top: -80px;
+
+        width: 260px;
+        height: 260px;
+    }
+}
