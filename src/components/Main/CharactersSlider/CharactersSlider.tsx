@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { dataCardList } from "../../../assets/data/dataPawPatrol";
 
 import CharactersCard from "./CharactersCard/CharactersCard";
@@ -36,9 +36,16 @@ const CharactersSlider = () => {
         return () => {}
     }
 
+    const getHoverText = (i: number) => {
+        if ( currentCard[2] + 1 === i) return '❯'
+        if ( currentCard[0] - 1 === i) return '❮'
+        return ''
+    }
+
+
     return (
         <>
-            <div className={styles.charactersSlider}>
+            <div className={styles.charactersSlider} >
                 <div className={styles.charactersWrapper + " " + (pageNumber > 1 ? styles[`page${pageNumber}`] : '')}>
                     { cardList.map((card, i) => 
                         <CharactersCard
@@ -48,6 +55,7 @@ const CharactersSlider = () => {
                             setCardIsOpen={setCardIsOpen}
                             cardIsOpen={cardIsOpen}
                             setPage={getSetPage(i)}
+                            hoverText={getHoverText(i)}
                             dataCard={card}
                         />
                     )} 

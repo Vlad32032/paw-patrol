@@ -1,0 +1,77 @@
+.CustomCursor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    width: 12px;
+    height: 12px;
+
+    background-color: rgb(226, 226, 226);
+    border-radius: 2px 50% 50%;
+
+    font-size: 25px;
+    color: black;
+
+    opacity: 0.5;
+
+    transition: 
+        background-color 300ms,
+        width 300ms,
+        height 300ms,
+        border 300ms,
+        opacity 200ms;
+
+}
+
+.red {
+    width: 22px;
+    height: 22px;
+
+    background-color: transparent;
+    border: 3px solid rgb(255, 0, 0);
+
+    border-radius: 50%;
+
+    opacity: 0.7;
+}
+
+.yellow {
+    width: 22px;
+    height: 22px;
+
+    background-color: transparent;
+    border: 3px solid rgb(255, 251, 0);
+    border-radius: 50%;
+
+    opacity: 0.7;
+}
+
+.yellowBig {
+    width: 38px;
+    height: 38px;
+
+    background-color: transparent;
+    border: 3px solid rgb(255, 251, 0);
+    border-radius: 50%;
+
+    color: yellow;
+
+    opacity: 0.7;
+}
+
+.active {
+    width: 60px;
+    height: 60px;
+
+    opacity: 0;
+
+    // transition:
+    //     width 200ms,
+    //     height 200ms,
+    //     opacity 200ms;
+}

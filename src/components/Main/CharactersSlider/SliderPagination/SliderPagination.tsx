@@ -31,8 +31,8 @@ const SliderPagination: FC<ISliderPagination> = ({ pageNumber, setPageNumber, ma
             classNames={{...styles}}
         >
             <div className={styles.SliderPagination} ref={ref}>
-                <button className={pageNumber === 1 ? styles.disabled + " " + styles.button : styles.button} onClick={prevPage}>{'❮ Prev'}</button>
-                <button className={pageNumber === maxPage ? styles.disabled + " " + styles.button : styles.button} onClick={nextPage}>{'Next ❯'}</button>
+                <button className={pageNumber === 1 ? styles.disabled + " " + styles.button : styles.button} onClick={prevPage} data-cursor='red' >{'❮ Prev'}</button>
+                <button className={pageNumber === maxPage ? styles.disabled + " " + styles.button : styles.button} onClick={nextPage} data-cursor='red' >{'Next ❯'}</button>
             </div>
         </CSSTransition>
     )
